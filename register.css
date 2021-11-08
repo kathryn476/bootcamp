@@ -22,7 +22,7 @@ img {
     float:right;
     align-content: center;
     width: 680px;
-    height:500px;
+    height:auto;
 }
 h1, h3{
     color:#ffa500;
