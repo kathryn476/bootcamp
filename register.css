@@ -1,10 +1,9 @@
 ﻿body {
     background-color: #d1d1d1;
+   
 }
 
-div{
-    align-content:flex-end;
-}
+
 input {
     border: 2px solid #ffa500;
     width: 650px;
@@ -13,38 +12,54 @@ input {
     text-size-adjust: 100%;
  
 }
-form{
-    align-content:center;
-    float:left;
+.second {
    
+    margin-left:500px;
+    margin-right: 500px;
+    padding-top:2px;
+    
 }
-img {
-    float:right;
+label{
+    font:bolder;
+    font-size: 17px;
+}
+
+h1, h3 {
+    color: #ffa500;
     align-content: center;
-    width: 680px;
-    height:auto;
-}
-h1, h3{
-    color:#ffa500;
-    align-content:center;
-    font-weight:bolder;
+    font-weight: bolder;
+    text-align: center;
 }
 .head{
-    text-align:center;
+   
 }
-button{
+button {
     background-color: black;
-    color:#ffa500;
-    height: 40px;
- 
+    color: #ffa500;
+    height: 30px;
+    border-radius: 5px;
+    
 }
 #register{
     float:left;
+    width:300px;
+   
 }
  #login{
      float: right;
+     padding-left: 35px;
  }
-::placeholder {
-   
-    font-size: 1.5em;
+ img{
+     width:100px;
+     height:100px;
+     float: left;
+ }
+#person {
+    border: 2px solid #ffa500;
+    text-decoration-color: #ffa500;
+}
+
+
+::selection {
+    background: red;
 }

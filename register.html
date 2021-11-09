@@ -3,29 +3,109 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Register Form </title>
-    <link rel="stylesheet" href="register.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form </title>
+    <link rel="stylesheet" href="register.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script  type="text/javascript" lang="javascript" src="register.js"></script>
 </head>
 <body>
-    <div class="head">
-        <h1>Register Here</h1>
-        <h3><em>Its completelty free!!!!</em></h3>
-    </div>
-    <form method="post" action="" class="first">
-        
-        <input type="text" placeholder="Full Name" name="full-name" id="fname" /> <br /><br /><br />
-        <input type="text" placeholder="User Name" name="user-name" id="uname" />   <br /><br /><br />
-        <input type="email" placeholder="Email" name="email" id="email" />  <br /><br /><br />
-        <input type="tel" placeholder="Telephone" name="telephone" id="tel" />  <br /><br /><br />
-        <input type="password" placeholder="Password" name="pass" id="pass" />  <br /><br /><br />
-        <input type="password" placeholder="Confirm Password" name="confirm-pass" id="cpass" />  <br /><br /><br />
+   
+   <div class="head">
+       <img src="logo.png" alt="logo" />
+       
+   </div>
+   <div class="second">
+       <h1>Register Here</h1>
+       <h3><em>Its completelty free!!!!</em></h3>
+       <form method="post" action="" name="reg" class="first" id="reg" onsubmit="return validate();"  >
+           <label>Are you a Student or Facilator?</label>
+           <select id="person" name="person">
+               <option  value="" disabled selected hidden>Please choose one</option>
+               <option value="0">Facilator</option>
+               <option value="1">Student</option>
+           </select><br /><br />
+           <label>Full Name</label><br />
+           <input type="text" placeholder="Full Name" name="fname" id="fname" /> <br /><br />
+           <label>User Name</label><br />
+           <input type="text" placeholder="User Name" name="uname" id="uname" />   <br /><br />
+           <label>Email</label><br />
+           <input type="email" placeholder="Email" name="email" id="email" />  <br /><br />
+           <label>Telephone</label><br />
+           <input type="tel" placeholder="Telephone" name="tel" id="tel" />  <br /><br />
+           <label>Password</label><br />
+           <input type="password" placeholder="Password" name="pwd" id="pwd" />  <br /><br />
+           <label>Confirm Password</label><br />
+           <input type="password" placeholder="Confirm Password" name="cpwd" id="cpwd" />  <br /> <br />
 
-        <button id="register">Register</button>
-        <button id="login">Already have an account? Login here</button>
-    </form>
-    <div class="logo">
-        <img src="logo.png" alt="logo"/>
-    </div>
+           <button id="register" name="submit" value="submit" type="submit"  >Register</button>
+           <!-- <button id="login">Already have an account? Login here</button>-->
+           <a href="#" id="login">Already have an account?</a>
+       </form>
+
+   </div>
+    
+    <script>
+        // JavaScript source code
+        const form = document.getElementById("reg");
+        const fname = document.getElementById("fname");
+        const uname = document.getElementById("uname");
+        const email = document.getElementById("email");
+        const tel = document.getElementById("tel");
+        const pwd = document.getElementById("pwd");
+        const cpwd = document.getElementById("cpwd");
+        const person = document.getElementById("person");
+
+        function validate() {
+            if (fname.value == "") {
+                alert("Please enter your Full Name.");
+                fname.focus();
+                return false;
+            }
+
+            if (uname.value == "") {
+                alert("Please enter your User Name.");
+                uname.focus();
+                return false;
+            }
+
+            if (email.value == "" || email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                alert(
+                    "Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (tel.value == "" || !tel.value.match(/^[1-9][0-9]{9}$/)) {
+                alert("Please enter your telephone and it must be 10 characters long number and first digit can't be 0!");
+                tel.focus();
+                return false;
+            }
+
+            if (person.value === "") {
+                alert("Please select an option that you qualify!")
+                return false;
+            }
+
+
+            if (!pwd.value.match(/^.{5,15}$/)) {
+                alert("Password length must be between 5-15 characters!");
+                pwd.focus();
+                return false;
+            }
+
+            if (!cpwd.value.match(/^.{5,15}$/)) {
+                alert("Password length must be between 5-15 characters!");
+                cpwd.focus();
+                return false;
+            }
+
+
+
+
+
+    </script>
+   
 </body>
 </html>
