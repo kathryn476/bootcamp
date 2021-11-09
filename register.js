@@ -1,57 +1,69 @@
-// JavaScript source code
-const form = document.getElementById("reg");
-    const fname = document.getElementById("fname");
-    const uname = document.getElementById("uname");
-    const email = document.getElementById("email");
-    const tel = document.getElementById("tel");
-    const pwd = document.getElementById("pwd");
-    const cpwd = document.getElementById("cpwd");
-    const person = document.getElementById("person");
-   
 function validate() {
-    if (fname.value == "") {
-        alert("Please enter your Full Name.");
-        fname.focus();
+    var Fname =
+        document.forms["RegForm"]["fname"];
+    var Uname =
+        document.forms["RegForm"]["uname"];
+    var Email =
+        document.forms["RegForm"]["email"];
+    var Tele =
+        document.forms["RegForm"]["tel"];
+    var Pass =
+        document.forms["RegForm"]["pwd"];
+    var Cpass =
+        document.forms["RegForm"]["cpwd"];
+    var Per =
+        document.forms["RegForm"]["person"];
+
+
+    if (Fname.value == "") {
+       window.alert("Please enter your  Full Name.");
+      // document.getElementById('fname').innerHTML = "this is invalid name";
+       Fname.focus();
+       return false;
+    }
+
+    if (Uname.value == "") {
+        alert("Please enter your  User Name.");
+        Uname.focus();
+        return false;
+    }
+    if (Tele.value == "") {
+        alert("Please enter your Telephone.");
+        Tele.focus();
         return false;
     }
 
-    if (uname.value == "") {
-        alert("Please enter your User Name.");
-        uname.focus();
-        return false;
-    }
-
-    if (email.value == "" || email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+    if (Email.value == "") {
         alert(
             "Please enter a valid e-mail address.");
         email.focus();
         return false;
     }
 
-    if (tel.value == "" || !tel.value.match(/^[1-9][0-9]{9}$/)) {
-        alert("Please enter your telephone and it must be 10 characters long number and first digit can't be 0!");
-        tel.focus();
+    if (Per.value == "") {
+        alert(
+            "Please select an option.");
+        Per.focus();
         return false;
     }
 
-    if (person.value === "") {
-        alert("Please select an option that you qualify!")
+    if (Pass.value == "" || !Pass.value.match(/^.{5,15}$/)) {
+        alert("Please enter your password and it should be length must be between 5-15 characters!");
+        Pass.focus();
         return false;
     }
 
-
-    if (!pwd.value.match(/^.{5,15}$/)) {
-        alert("Password length must be between 5-15 characters!");
-        pwd.focus();
+    if (Cpass.value == "" || !Cpass.value.match(/^.{5,15}$/)) {
+        alert("Please confirm password");
+        Cpass.focus();
         return false;
     }
 
-    if (!cpwd.value.match(/^.{5,15}$/)) {
-        alert("Password length must be between 5-15 characters!");
-        cpwd.focus();
-        return false;
+    if (Pass.value != Cpass.value) {
+        alert("Password did not match");
     }
-   
 
-    
 
+
+    return true;
+}
