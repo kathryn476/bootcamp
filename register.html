@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,7 +8,79 @@
     <link rel="stylesheet" href="register.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script  type="text/javascript" lang="javascript" src="register.js"></script>
+    <script type="text/javascript" lang="javascript" src="register.js"></script>
+
+
+ <!--   <script>
+        function validate() {
+            var Fname =
+                document.forms["RegForm"]["fname"];
+            var Uname =
+                document.forms["RegForm"]["uname"];
+            var Email =
+                document.forms["RegForm"]["email"];
+            var Tele =
+                document.forms["RegForm"]["tel"];
+            var Pass =
+                document.forms["RegForm"]["pwd"];
+            var Cpass =
+                document.forms["RegForm"]["cpwd"];
+            var Per =
+                document.forms["RegForm"]["person"];
+            
+
+            if (Fname.value == "") {
+                alert("Please enter your  Full Name.");
+                Fname.focus();
+                return false;
+            }
+
+            if (Uname.value == "") {
+                alert("Please enter your  User Name.");
+                Uname.focus();
+                return false;
+            }
+            if (Tele.value == "") {
+                alert("Please enter your Telephone.");
+                Tele.focus();
+                return false;
+            }
+
+            if (Email.value == "") {
+                alert(
+                    "Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (Per.value == "") {
+                alert(
+                    "Please select an option.");
+                Per.focus();
+                return false;
+            }
+
+            if (Pass.value == "" || !Pass.value.match(/^.{5,15}$/)) {
+                alert("Please enter your password and it should be length must be between 5-15 characters!");
+                Pass.focus();
+                return false;
+            }
+
+            if (Cpass.value == "" ) {
+                alert("Please confirm password");
+                Cpass.focus();
+                return false;
+            }
+
+            if (Pass.value != Cpass.value) {
+                alert("Password did not match");
+            }
+
+            
+
+            return true;
+        }
+    </script> -->
 </head>
 <body>
    
@@ -19,7 +91,7 @@
    <div class="second">
        <h1>Register Here</h1>
        <h3><em>Its completelty free!!!!</em></h3>
-       <form method="post"  name="reg" class="first" id="reg" onsubmit="return validate();"  >
+       <form method="post" action="#" name="RegForm" class="first" id="reg"  onsubmit="return validate()"  >
            <label>Are you a Student or Facilator?</label>
            <select id="person" name="person">
                <option  value="" disabled selected hidden>Please choose one</option>
@@ -27,7 +99,7 @@
                <option value="1">Student</option>
            </select><br /><br />
            <label>Full Name</label><br />
-           <input type="text" placeholder="Full Name" name="fname" id="fname" /> <br /><br />
+           <input type="text" placeholder="Full Name" name="fname" id="fname"  /> <br /><br />
            <label>User Name</label><br />
            <input type="text" placeholder="User Name" name="uname" id="uname" />   <br /><br />
            <label>Email</label><br />
@@ -46,7 +118,7 @@
 
    </div>
     
-
+  
    
 </body>
 </html>
