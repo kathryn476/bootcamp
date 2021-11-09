@@ -2,6 +2,9 @@
     background-color: #d1d1d1;
    
 }
+@media (max-width: 650px){
+    body,form,h1,h3,div,select,label,a
+}
 
 
 input {
