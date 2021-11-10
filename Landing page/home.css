@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(
+        #334756, 
+        rgba(255, 0, 0, 0.45)
+      ), url('./images/christina-wocintechchat-com-Yp-X2Yba_14-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: gainsboro;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 3px;
+}
+
+@media (max-width: 600px){
+    header {
+        flex-wrap: wrap;
+    }
+    body {
+        flex-wrap: wrap;
+        background-repeat: no-repeat;
+    }
+}
+
+#header-img {
+    grid-column: 1;
+    width: 100%;
+    align-self: center;
+}
+
+@media (max-width: 650px) {
+    #header-img {
+        margin-top: 15px;
+        width: 100%;
+        position: relative;
+    }
+}
+
+#nav-bar{
+    grid-column: 2;
+    align-self: center;
+    justify-self: right;
+    display: flex;
+    margin-right: 8px;
+}
+
+.nav-link{
+    text-decoration: inherit;
+    margin: 20px;
+    color: inherit;
+}
+
+nav {
+    font-weight: 400;
+    color: rgb(233, 164, 36);
+}
+
+@media(max-width: 650px){
+    nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px 0 50;
+    }
+      nav li {
+        padding-bottom: 10px;
+    }
+}
+  
+main{
+    margin: auto;
+    position: relative;
+    max-width: 100%;
+}
+
+#page1{
+    display: grid;
+    grid-template-columns: 400px 800px;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+#home-div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 50px;
+}
+
+#home-div h1{
+    font-size: 80px;
+    color: white;
+    margin-top: 100px;
+}
+
+#home-div p{
+    font-size: 20px;
+    color: white;
+}
+
+#signup-div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid whitesmoke;
+    background-color:white;
+    border-radius: 10px;
+    margin-top: 200px;
+    padding: 60px 20px 60px 20px;
+    opacity: 0.8;
+}
+
+#signup-div p {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#signup-div h2 {
+    line-height: 40px;
+    text-align: center;
+}
+
+@media (max-width: 650px){
+    main {
+        margin-top: 100px;
+    }
+    #page1 {
+        margin-top: 2px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    #home-div h1 {
+        font-size: 50px;
+        align-content: center;
+        margin-top: 10px;
+    }
+    #signup-div {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    #signup-img {
+        max-width: 100%;
+    }
+}
+
+#submit {
+    background-color: rgb(233, 164, 36);
+    border: thin;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#submit:hover {
+    transform: scale(1.05);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.courses {
+    text-align: center;
+    padding: 4rem;
+    margin-top: 180px; 
+    
+}
+
+@media (max-width: 650px) {
+    .courses{
+        margin-top: 20px;
+    }
+}
+
+.courses h2 {
+    margin: 0 auto 4rem auto;
+    font-size: 4rem;
+    color: white;
+}
+
+#courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(320px, 6fr));
+    grid-gap: 4rem;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;;
+}
+
+#course-div {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 100%;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: black;
+    padding: 0 0 30px 0;
+}
+
+/*{
+    flex-wrap: wrap;
+    align-content: center;
+    background: black;
+    box-shadow: 1px 1px 2px rgba(238, 223, 223, 0.5);
+    border-radius: 2px;
+}*/
+
+#course-div a {
+    color: rgb(233, 164, 36);
+    transition: color 0.3s ease-out;
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+    margin-top: 0;
+}
+
+#course-div a:hover {
+    color: white;
+}
+
+#courses-img {
+    max-width: 100%;
+    border-radius: 2px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: rgba(233, 164, 36, 0.781);
+    padding: 5px;
+}
+  
+footer > nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+  
+footer > p {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color:black;
+}
