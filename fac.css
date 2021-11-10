@@ -1,0 +1,40 @@
+.container{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+    
+
+.line{
+    border-left: 4px  solid orange;
+    height: 270px;
+    position: relative;
+    left: 20px;
+    margin-left: -3px;
+    top: 0;
+    
+
+}
+.card{
+   width: 50%;
+   height: 200px; 
+    background-color: white;
+    padding-top: 20px;
+    
+}
+p{
+    left: 30px;
+    margin: 8px;
+}
+h5{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
